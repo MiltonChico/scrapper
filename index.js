@@ -1,8 +1,11 @@
-const browserObject = require('./browser');
-const scraperController = require('./controller/pageController');
+const Airtable = require('./models/Airtable');
 
-//Start the browser and create a browser instance
-let browserInstance = browserObject.startBrowser();
+class Scrapper {
+    static _init(){
+        const AllRealtors = Airtable.getAllRealtors();
 
-// Pass the browser instance to the scraper controller
-scraperController(browserInstance)
+        console.log(AllRealtors);
+    }
+}
+
+Scrapper._init();
