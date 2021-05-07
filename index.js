@@ -1,6 +1,8 @@
 const Airtable = require('./models/Airtable');
 const ZillowController = require('./controller/ZillowController');
 const RealtorController = require('./controller/RealtorController')
+const YelpController = require('./controller/YelpController')
+
 // const AirtableController = require('./controller/AirtableController');
 const browserObject = require('./browser');
 
@@ -12,13 +14,17 @@ class Scrapper {
         
         var i;
         for( i = 0; i < AllRealtors.length ; i++) {
-            // console.log(AllRealtors[i]);
+            
             // if(AllRealtors[i].zillow){
             //     const zillowReviews = await ZillowController.start(AllRealtors[i].zillow, browserInstance);
             //     //await AirtableController.save(zillowReviews);
             // }
-            if(AllRealtors[i].realtor){
-                const realtorReviews = await RealtorController.start(AllRealtors[i].realtor, browserInstance);
+            // if(AllRealtors[i].realtor){
+            //     const realtorReviews = await RealtorController.start(AllRealtors[i].realtor, browserInstance);
+            //     //await AirtableController.save(zillowReviews);
+            // }
+            if(AllRealtors[i].yelp){
+                const yelpReviews = await YelpController.start(AllRealtors[i].yelp, browserInstance);
                 //await AirtableController.save(zillowReviews);
             }
             

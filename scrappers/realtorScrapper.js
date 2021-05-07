@@ -1,5 +1,5 @@
 const realtorScrapper = {
-     url: 'https://www.realtor.com/realestateagents/diane-waters___637598_842599412',
+     url: '',
      async scraper(browser){
          let page = await browser.newPage();
          console.log(`Navigating to ${this.url}...`);

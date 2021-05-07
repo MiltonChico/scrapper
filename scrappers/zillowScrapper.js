@@ -1,5 +1,5 @@
 const zillowScrapper = {
-    url: 'https://www.zillow.com/profile/kbainesrealestate/',
+    url: '',
     async scraper(browser){
         let page = await browser.newPage();
         console.log(`Navigating to ${this.url}...`);
