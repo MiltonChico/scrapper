@@ -1,4 +1,3 @@
-
 const zillowScrapper = {
     url: 'https://www.zillow.com/profile/kbainesrealestate/',
     async scraper(browser){
@@ -27,9 +26,9 @@ const zillowScrapper = {
                 return toReturn;
             })
             // Extract the links from the data
-            
             return review;
         });
+        console.log(reviewsToReturn)
         return reviewsToReturn;
     }
 }

@@ -13,7 +13,7 @@ class Airtable {
                 zillow:"https://www.zillow.com/profile/ATX-Homes-Sold-Group/",
                 realtor:"https://www.realtor.com/realestateagents/summer-carter_austin_tx_3072663_032659412",
                 google:"",
-                yelp:"",
+                yelp:"https://www.yelp.com/biz/summer-carter-atx-homes-sold-group-exp-realty-austin?osq=Summer+Carter",
                 facebook:"",
             },{
                 name:"Kirk Lewis",

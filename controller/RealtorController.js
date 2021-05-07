@@ -1,6 +1,6 @@
-const scrapper = require('../scrappers/zillowScrapper');
+const scrapper = require('../scrappers/realtorScrapper');
 
-class ZillowController {
+class RealtorController {
     static async start(url, browser){
         let reviewsToReturn = [];
         try{
@@ -17,4 +17,4 @@ class ZillowController {
     }
 }
 
-module.exports = ZillowController;
+module.exports = RealtorController;
