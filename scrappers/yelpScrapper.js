@@ -9,19 +9,21 @@ const yelpScrapper = {
          // Get the link to all the required books
          console.log("looking for reviews");
 
-         let reviewsToReturn = await page.$$eval('div.border-color--default__373c0__2oFDT ul' , reviews => {
+         let reviewsToReturn = await page.$$eval('.margin-b5__373c0__2ErL8' , reviews => {
               console.log('in div');
               console.log(reviews);
 
               review = reviews.map(el => {
-                   const user = el.querySelector('li.margin-b5__373c0__2ErL8.border-color--default__373c0__2oFDT a .target name rol') ? el.querySelector('li.margin-b5__373c0__2ErL8.border-color--default__373c0__2oFDT a.target name rol').innerText : "";
-               //     const place = el.querySelector('p.preview-individual-reviews-title-text1') ? el.querySelector('p.preview-individual-reviews-title-text1').innerText : "";
-               //     const text = el.querySelector('div.preview-individual-review') ? el.querySelector('div.preview-individual-review').innerText : "";
+                   const user = el.querySelector('.css-m6anxm') ? el.querySelector('.css-m6anxm').innerText : "";
+                   const place = el.querySelector('.css-n6i4z7') ? el.querySelector('.css-n6i4z7').innerText : "";
+                   const date = el.querySelector('.css-e81eai') ? el.querySelector('.css-e81eai').innerText : "";
+                   const text = el.querySelector('.raw__373c0__3rcx7') ? el.querySelector('.raw__373c0__3rcx7').innerText : "";
                    
                    toReturn = {
                         user: user,
-                    //     place: place,
-                    //     text: text,
+                        place: place,
+                        date: date,
+                        text: text,
                    }
                    return toReturn
               })
