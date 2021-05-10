@@ -23,11 +23,14 @@ class Scrapper {
             //     const realtorReviews = await RealtorController.start(AllRealtors[i].realtor, browserInstance);
             //     //await AirtableController.save(zillowReviews);
             // }
+            // if(AllRealtors[i].yelp){
+            //     const yelpReviews = await YelpController.start(AllRealtors[i].yelp, browserInstance);
+            //     //await AirtableController.save(zillowReviews);
+            // }
             if(AllRealtors[i].yelp){
                 const yelpReviews = await YelpController.start(AllRealtors[i].yelp, browserInstance);
                 //await AirtableController.save(zillowReviews);
-            }
-            
+            }       
         }
     } 
 }
