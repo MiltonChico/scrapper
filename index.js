@@ -11,6 +11,8 @@ class Scrapper {
     static async _init(){
         //Consulta a todos los Realtors
         const AllRealtors = await Airtable.getAllRealtors();
+        console.log(AllRealtors);
+        //process.exit();
         let browserInstance = browserObject.startBrowser();
         
         var i;
@@ -27,13 +29,13 @@ class Scrapper {
             if(AllRealtors[i].google){
                 const googleReviews = await GoogleController.start(AllRealtors[i].google, browserInstance);
                 //await AirtableController.save(zillowReviews);
-            }       
+            }
             if(AllRealtors[i].yelp){
                 const yelpReviews = await YelpController.start(AllRealtors[i].yelp, browserInstance);
                 //await AirtableController.save(zillowReviews);
             }
         }
-    } 
+    }
 }
 
 Scrapper._init();
